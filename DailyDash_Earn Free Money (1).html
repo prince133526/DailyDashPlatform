@@ -1,0 +1,2262 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .section, .screen, .container {
+    max-width: 460px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    border-radius: 18px;
+    padding: 25px 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    margin: 20px 0;
+  }
+
+  h1, h2, h3 {
+    color: #ffffff;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 15px;
+    color: #dddddd;
+    line-height: 1.7;
+  }
+
+  input, select {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0 20px;
+    font-size: 15px;
+    border: none;
+    border-radius: 12px;
+    background-color: #ffffff;
+    color: #222;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  }
+
+  button {
+  background-color: #ff4c4c !important;
+  color: white !important;
+  font-weight: bold;
+    width: 100%;
+    padding: 14px;
+    font-size: 15px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  button:hover {
+  background-color: #e53935 !important;
+    background: linear-gradient(to right, #00a18c, #84b836);
+  }
+
+  .warning-icon, .verified-icon {
+    font-size: 60px;
+    margin: 20px 0;
+  }
+
+  .upload-box {
+    border: 2px dashed #ffffff55;
+    padding: 25px;
+    border-radius: 12px;
+    background-color: rgba(255,255,255,0.07);
+    margin-top: 20px;
+  }
+
+  .claim-box, .atm-card {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+  }
+
+  .profile-icon img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+
+body {
+  background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+  background-size: 400% 400%;
+  animation: gradientFlow 15s ease infinite;
+  font-family: 'Poppins', sans-serif;
+}
+
+@keyframes gradientFlow {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+.section, .container, .screen {
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+  border-radius: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section:hover, .container:hover, .screen:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+button {
+  background: linear-gradient(90deg, #fc466b, #3f5efb) !important;
+  color: white !important;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #f7971e, #ffd200) !important;
+  transform: scale(1.03);
+}
+
+body {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  background-size: 300% 300%;
+  animation: pulseBG 12s ease infinite;
+}
+
+@keyframes pulseBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.section, .container, .screen {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 25px 20px;
+  border-radius: 20px;
+}
+
+input, select {
+  background-color: rgba(255,255,255,0.9);
+  color: #000;
+}
+
+input::placeholder, select {
+  color: #444;
+}
+
+button {
+  background: linear-gradient(90deg, #fc466b, #3f5efb) !important;
+  color: white !important;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #f7971e, #ffd200) !important;
+  transform: scale(1.03);
+}
+
+body {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  background-size: 400% 400%;
+  animation: appBG 20s ease infinite;
+}
+
+@keyframes appBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+.section, .container, .screen {
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(18px);
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.15);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+h2, h3, p {
+  color: #ffffff;
+}
+</style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Daily Dash</title>
+<style>
+    @keyframes blink {
+      from { opacity: 1; }
+      to { opacity: 0.4; }
+    }
+    </style>
+</head>
+<body>
+<div class="section active" id="welcomeScreen">
+<h2>Welcome to Daily Dash</h2>
+<p style="font-size: 15px; line-height: 1.6; color: #eeeeee;">
+    Daily Dash is your daily rewards platform where users earn real money simply by participating in daily tasks. 
+    Withdraw your earnings every day securely and instantly. By continuing, you agree to abide by our terms, which 
+    ensure a fair and transparent system for all users. Earn consistently, withdraw confidently, and grow your balance 
+    day by day. Start now and enjoy a rewarding experience like never before.
+  </p>
+<label style="display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 20px; font-size: 14px; color: #fff;">
+<input id="agreeTerms" style="width: 16px; height: 16px; accent-color: #ff4c4c;" type="checkbox"/> I agree to the terms and policies
+  </label>
+<button onclick="proceedToRegister()">NEXT</button>
+<!-- BEGIN: User Count + Earnings Tracker + Admin Message + Verified Users -->
+<div id="convinceBlock" style="padding: 20px; margin-top: 20px; text-align: center;">
+<!-- Live Users -->
+<div id="liveUserCount" style="font-size: 16px; font-weight: bold; color: #00ffcc;">412 users online now</div>
+<!-- Earnings Counter -->
+<div style="margin-top: 10px; font-size: 18px; font-weight: bold; color: #ffeb3b;">
+    ₦<span id="earningsCount">0</span>+ paid out to users
+  </div>
+<!-- Admin Message -->
+<div style="margin-top: 15px; background: rgba(0,0,0,0.5); padding: 12px 20px; border-radius: 12px; max-width: 420px; margin-left:auto; margin-right:auto;">
+<strong style="color: #00ff90;">Admin:</strong> Welcome to Daily Dash! Need help verifying? We’re here for you. Let's grow together.
+  </div>
+<!-- Security Badges -->
+<div style="margin-top: 20px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+<div style="background: rgba(255,255,255,0.05); padding: 10px 20px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1);">
+<img src="https://img.icons8.com/fluency/48/shield.png" style="width: 28px; vertical-align: middle;"/> 100% Secure
+    </div>
+<div style="background: rgba(255,255,255,0.05); padding: 10px 20px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1);">
+<img src="https://img.icons8.com/fluency/48/thumb-up.png" style="width: 28px; vertical-align: middle;"/> Verified System
+    </div>
+<div style="background: rgba(255,255,255,0.05); padding: 10px 20px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1);">
+<img src="https://img.icons8.com/fluency/48/group-foreground-selected.png" style="width: 28px; vertical-align: middle;"/> Trusted by Many
+    </div>
+</div>
+<!-- Top Verified Users -->
+<div style="margin-top: 30px; background: rgba(0,0,0,0.6); padding: 20px; border-radius: 12px; text-align: left; max-width: 500px; margin-left:auto; margin-right:auto;">
+<strong style="color:#00ffcc; font-size: 16px;">Top Verified Users Today:</strong>
+<ul id="topUsersList" style="margin-top: 10px; padding-left: 20px; color: #ffffff;">
+<!-- Filled by script -->
+</ul>
+</div>
+</div>
+<script>
+let usersOnline = 412;
+setInterval(() => {
+  usersOnline += (Math.random() > 0.5 ? 1 : -1) * Math.floor(Math.random() * 3);
+  document.getElementById("liveUserCount").innerText = usersOnline + " users online now";
+}, 4000);
+
+// Earnings Tracker
+let earnings = 12800000;
+const earningsDisplay = document.getElementById("earningsCount");
+function updateEarnings() {
+  earnings += Math.floor(Math.random() * 5000 + 2000);
+  earningsDisplay.innerText = earnings.toLocaleString();
+}
+setInterval(updateEarnings, 3000);
+
+// Top Verified Users
+const users = [
+  "Musa A. — Verified 2 hours ago",
+  "Fatima B. — Verified 5 minutes ago",
+  "Abdul R. — Verified today",
+  "Amina Y. — Verified 1 hour ago",
+  "Hassan J. — Verified 3 hours ago",
+  "Zainab T. — Verified just now"
+];
+const userList = document.getElementById("topUsersList");
+users.forEach(user => {
+  const li = document.createElement("li");
+  li.innerText = user;
+  userList.appendChild(li);
+});
+</script>
+<!-- END: User Count + Earnings Tracker + Admin Message + Verified Users -->
+</div>
+<div class="section active" id="authSection" style="display:none;">
+
+<h2 id="formTitle">Create Your Daily Dash Account</h2>
+<div class="form-section" id="registerForm">
+<input id="regEmail" placeholder="Email Address" type="email"/>
+<input id="regPhone" placeholder="Phone Number" type="tel"/>
+<input id="regUsername" placeholder="Username" type="text"/>
+<input id="regPassword" placeholder="Password" type="password"/>
+<input id="regConfirmPassword" placeholder="Confirm Password" type="password"/>
+<button onclick="registerUser()">Register</button>
+<p>Already have an account? <a href="#" onclick="document.getElementById('registerForm').style.display='none';document.getElementById('loginForm').style.display='block';document.getElementById('formTitle').innerText='Login to Daily Dash';">Login here</a></p></div>
+<div class="form-section" id="loginForm" style="display:none;">
+<input id="loginIdentifier" placeholder="Username or Email" type="text"/>
+<input id="loginPassword" placeholder="Password" type="password"/>
+<button onclick="loginUser()">Login</button>
+<p>Don't have an account? <a href="#" onclick="document.getElementById('loginForm').style.display='none';document.getElementById('registerForm').style.display='block';document.getElementById('formTitle').innerText='Create Your Daily Dash Account';">Sign up here</a></p></div>
+</div>
+<div id="dashboardWrapper" style="display:block;">
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Daily Dash</title>
+<style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+    .screen {
+      display: none;
+      max-width: 800px;
+      margin: auto;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 15px;
+      margin-top: 20px;
+    }
+    .screen.active {
+      display: block;
+    }
+    input, button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+    }
+    button {
+      background-color: #ffffff;
+      color: #00b09b;
+      cursor: pointer;
+    }
+    .atm-card {
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      border-radius: 15px;
+      padding: 20px;
+      color: black;
+      margin: 20px 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
+    .icons {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 10px;
+    }
+    .profile {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .profile-icon {
+      width: 40px;
+      height: 40px;
+      background-color: white;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    .claim-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+    .claim-box {
+      background-color: #2d2d2d;
+      padding: 15px;
+      border-radius: 15px;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      transition: transform 0.2s ease-in-out;
+    }
+    .claim-box:hover {
+      transform: scale(1.05);
+    }
+    .claim-box.claimed {
+      background-color: gray;
+      cursor: not-allowed;
+    }
+    .claim-box.locked {
+      background-color: #444;
+      cursor: not-allowed;
+    }
+    .claim-button {
+      background: #00ff90;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 50%;
+      font-weight: bold;
+      color: black;
+      cursor: pointer;
+      margin-top: 10px;
+      position: relative;
+      animation: rotate-glow 2s infinite linear;
+    }
+    @keyframes rotate-glow {
+      0% { box-shadow: 0 0 5px #0f0, 0 0 10px #0f0; transform: rotate(0deg); }
+      100% { box-shadow: 0 0 10px #0f0, 0 0 20px #0f0; transform: rotate(360deg); }
+    }
+    .timer {
+      font-size: 12px;
+      margin-top: 5px;
+      color: #ff5252;
+    }
+    .coin-icon {
+      font-size: 30px;
+      margin: 5px 0;
+    }
+    .claimed-text {
+      color: #ffeb3b;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+  
+    @keyframes boxPulse {
+      0% { box-shadow: 0 0 10px #00ff90; }
+      50% { box-shadow: 0 0 25px #00ff90; transform: scale(1.02); }
+      100% { box-shadow: 0 0 10px #00ff90; }
+    }
+
+    @keyframes rotateBox {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .claim-ready {
+      animation: boxPulse 1.5s ease-in-out infinite;
+    }
+
+    .claim-waiting {
+      animation: rotateBox 8s linear infinite;
+      border: 2px dashed #ff4081;
+    }
+    </style>
+<style>
+    @keyframes blink {
+      from { opacity: 1; }
+      to { opacity: 0.4; }
+    }
+    </style>
+</head>
+<body>
+<div class="screen" id="dashboardScreen">
+<div class="profile">
+<div class="profile-icon"><img alt="Profile" src="https://www.w3schools.com/howto/img_avatar.png" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;"/><span style="margin-left: 10px; font-size: 14px; color: #ffffff; font-weight: 500;">Welcome back!</span></div>
+<div>
+<h3 id="greeting">Good day,</h3>
+<p id="userLabel">@Guest</p>
+</div>
+</div>
+<div class="atm-card">
+<h2>Available Balance</h2>
+<h1 id="balance">₦0.00</h1>
+<div class="icons">
+<button onclick="showScreen('withdrawStep1')">Withdraw</button>
+<button onclick="showScreen('historyScreen')">History</button>
+</div>
+</div>
+<!-- BEGIN: Psychological Triggers -->
+<!-- 1. Streak Rewards Section -->
+<div style="margin-top: 20px; background: rgba(0,255,0,0.1); padding: 15px; border-radius: 10px; text-align: left;">
+<strong style="color: #00ff90;">Daily Streak:</strong> You're on a 3-day streak! 
+  <div style="margin-top: 8px;">Complete 5 days in a row to unlock <strong>₦5,000 bonus</strong>.</div>
+<div style="margin-top: 8px; font-size: 13px; color: #ffeb3b;">Don't miss it — keep claiming daily!</div>
+</div>
+<!-- 4. Withdrawal History Adjustment -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const history = document.getElementById("transactionList");
+  if (history) {
+    const failed = document.createElement("div");
+    failed.style = "margin-bottom: 15px; padding: 12px; background: rgba(255,0,0,0.08); border-left: 4px solid red; text-align: left; border-radius: 10px;";
+    failed.innerHTML = '<strong style="color: red;">₦15,000</strong> - <span style="color:#ccc;">Failed: Account not verified</span><br><small style="color:#888;">May 16, 2025 - 3:00 PM</small>';
+    history.appendChild(failed);
+  }
+});
+</script>
+<!-- END: Psychological Triggers -->
+<div class="claim-grid" id="claimGrid">
+<!-- BEGIN: 100% Verified Features Pack -->
+<!-- 1. Verified User Feed -->
+<div style="margin-top: 25px; padding: 15px; background: rgba(255,255,255,0.05); border-radius: 10px;">
+<h3 style="color:#00ffcc;">Recently Verified Users</h3>
+<ul style="color:white; padding-left: 15px;">
+<li>Umar S. – Verified 2 hours ago</li>
+<li>Zainab T. – Verified today</li>
+<li>Abdullahi Y. – Verified 30 mins ago</li>
+<li>Hauwa B. – Verified yesterday</li>
+<li>Musa G. – Verified just now</li>
+</ul>
+</div>
+<!-- 2. Failed Withdrawal Log logic (script only) -->
+<script>
+let isVerified = false;
+function logFailedWithdrawal(amount) {
+  const historyList = document.getElementById("transactionList");
+  if (historyList) {
+    const div = document.createElement("div");
+    div.style = "margin-bottom: 15px; padding: 12px; background: rgba(255,0,0,0.08); border-left: 4px solid red; text-align: left; border-radius: 10px;";
+    const date = new Date().toLocaleString();
+    div.innerHTML = `<strong style="color: red;">₦${parseInt(amount).toLocaleString()}</strong> - <span style="color:#ccc;">Failed: Account not verified</span><br><small style="color:#888;">${date}</small>`;
+    historyList.prepend(div);
+  }
+}
+</script>
+<!-- 3. Top Referrers Leaderboard -->
+<div style="margin-top: 30px; padding: 15px; background: rgba(0,0,0,0.2); border-radius: 10px;">
+<h3 style="color:#ffeb3b;">Top Referrers</h3>
+<ul style="list-style:none; color:white; padding-left: 0;">
+<li>1. Musa A. – ₦120,000</li>
+<li>2. Fatima B. – ₦102,000</li>
+<li>3. Usman T. – ₦91,000</li>
+<li>4. Hauwa L. – ₦88,500</li>
+<li>5. Abdullahi S. – ₦76,000</li>
+</ul>
+</div>
+<!-- 4. VIP Account Level -->
+<div style="margin-top: 30px; text-align: center;">
+<h4 style="color: #00ff90;">Account Level: <span style="color:#fff;">BRONZE</span></h4>
+<div style="width: 80%; margin: 10px auto; height: 15px; background: #333; border-radius: 10px;">
+<div style="height: 100%; width: 25%; background: linear-gradient(to right, #f39c12, #d35400); border-radius: 10px;"></div>
+</div>
+<small style="color: #aaa;">Verify to upgrade to Silver and Gold</small>
+</div>
+<!-- 5. Fake Receipt Display -->
+<div style="margin-top: 40px; padding: 15px; background: rgba(255,255,255,0.04); border-radius: 12px;">
+<h3 style="color: #ffeb3b;">Receipt Preview</h3>
+<p style="color: white; font-size: 14px;">
+    Bank: Zenith Bank<br/>
+    Account: 3008****03<br/>
+    Amount: ₦35,000<br/>
+    Status: <span style="color:red;">Pending Verification</span><br/>
+    Date: <script>document.write(new Date().toLocaleDateString());</script>
+</p>
+</div>
+<!-- 6. Animated Total Payout Tracker -->
+<div style="margin-top: 20px; font-size: 16px; text-align: center; color: #00ffcc;">
+  ₦<span id="payoutCounter">12800000</span>+ paid out to users
+</div>
+<script>
+let totalPayout = 12800000;
+setInterval(() => {
+  totalPayout += Math.floor(Math.random() * 3000 + 1000);
+  document.getElementById("payoutCounter").innerText = totalPayout.toLocaleString();
+}, 4000);
+</script>
+<!-- 7. Online User Counter -->
+<div style="margin-top: 10px; text-align: center; color: #00ffcc; font-size: 15px;">
+<span id="liveUserCount">312</span> users online now
+</div>
+<script>
+let usersOnline = 312;
+setInterval(() => {
+  usersOnline += (Math.random() > 0.5 ? 1 : -1) * Math.floor(Math.random() * 3);
+  document.getElementById("liveUserCount").innerText = usersOnline;
+}, 3000);
+</script>
+<!-- 8. Admin Bot Message -->
+<div style="margin-top: 25px; background: rgba(255,255,255,0.03); padding: 15px; border-left: 4px solid #00ffcc; color: #eee; border-radius: 10px;">
+<strong>Admin:</strong> You have ₦35,000 pending. Complete your one-time verification to receive it.
+</div>
+<!-- END: 100% Verified Features Pack -->
+</div>
+</div>
+<div class="screen" id="historyScreen">
+<div style="padding: 20px;">
+<h2 style="margin-bottom: 10px; color: #ffffff;">Transaction History</h2>
+<p style="font-size: 14px; color: #cccccc;">All your successful and pending withdrawals will appear here.</p>
+<div style="margin-top: 30px; padding: 25px; text-align: center; background: rgba(255,255,255,0.05);
+                border-radius: 16px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+</div>
+</div>
+<div id="transactionList" style="margin-top: 20px; text-align: left;"></div><button onclick="showScreen('dashboardScreen')">← Back to Dashboard</button></div>
+<script>
+    let balance = 0;
+    let currentDay = 1;
+    let claimTimes = {};
+    let countdownIntervals = {};
+
+    function showScreen(id) {
+      document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+
+    function getGreeting() {
+      const hour = new Date().getHours();
+      if (hour < 12) return "Good morning,";
+      else if (hour < 18) return "Good afternoon,";
+      else return "Good evening,";
+    }
+
+    function buildClaimGrid() {
+      const grid = document.getElementById("claimGrid");
+      grid.innerHTML = "";
+      const now = Date.now();
+
+      for (let i = 1; i <= 30; i++) {
+        const amount = 10000 + (i - 1) * 5000;
+        const box = document.createElement("div");
+        box.className = "claim-box";
+        box.innerHTML = `<strong>Day ${i}</strong>
+          <div class="coin-icon">💰</div>
+          ₦${amount.toLocaleString()}
+          <div id="content-${i}"></div>`;
+
+        const content = box.querySelector(`#content-${i}`);
+
+        if (i < currentDay) {
+          content.innerHTML = '<div class="claimed-text">✓ Claimed</div>';
+        } else if (i === currentDay) {
+          if (!claimTimes[i] || now >= claimTimes[i]) {
+            const btn = document.createElement("button");
+            btn.className = "claim-button";
+            btn.innerText = "CLAIM";
+            btn.onclick = () => claimReward(i, amount, btn);
+            content.appendChild(btn);
+          } else {
+            const timer = document.createElement("div");
+            timer.className = "timer";
+            timer.id = `timer-${i}`;
+            content.appendChild(timer);
+            startCountdown(i);
+          }
+        } else if (claimTimes[i]) {
+          const timer = document.createElement("div");
+          timer.className = "timer";
+          timer.id = `timer-${i}`;
+          content.appendChild(timer);
+          startCountdown(i);
+        }
+
+        
+    if (i === currentDay) {
+      box.classList.add("claim-ready");
+    }
+
+    if (i === currentDay + 1 && claimTimes[i]) {
+      box.classList.add("claim-waiting");
+
+      const content = box.querySelector(`#content-${i}`);
+      const waitText = document.createElement("div");
+      const countdown = document.createElement("div");
+countdown.className = "timer";
+countdown.id = `timer-${i}`;
+content.appendChild(countdown);
+startCountdown(i);
+      waitText.style.color = "#ff4081";
+      waitText.style.fontSize = "13px";
+      waitText.style.marginTop = "5px";
+      content.appendChild(waitText);
+    }
+
+    grid.appendChild(box);
+    
+      }
+    }
+
+    function claimReward(day, amount, btn) {
+      balance += amount;
+      document.getElementById("balance").innerText = "₦" + balance.toLocaleString(); showRewardMissionAlert(amount);
+
+      const parent = btn.parentNode;
+      btn.remove();
+      parent.innerHTML = '<div class="claimed-text">✓ Claimed</div>';
+
+      const nextDay = day + 1;
+      if (nextDay <= 30) {
+        claimTimes[nextDay] = Date.now() + 86400000;
+      }
+
+      currentDay++;
+      buildClaimGrid();
+    }
+
+    function startCountdown(day) {
+      const timerEl = document.getElementById(`timer-${day}`);
+      if (!timerEl) return;
+
+      countdownIntervals[day] = setInterval(() => {
+        const now = Date.now();
+        const remaining = claimTimes[day] - now;
+
+        if (remaining <= 0) {
+          clearInterval(countdownIntervals[day]);
+          buildClaimGrid();
+        } else {
+          const hrs = String(Math.floor(remaining / 3600000)).padStart(2, '0');
+          const mins = String(Math.floor((remaining % 3600000) / 60000)).padStart(2, '0');
+          const secs = String(Math.floor((remaining % 60000) / 1000)).padStart(2, '0');
+          timerEl.innerText = `Available to claim in: ${hrs}:${mins}:${secs}`;
+        }
+      }, 1000);
+    }
+
+    buildClaimGrid();
+  </script>
+<!-- Professional Reward Alert -->
+<div id="rewardMissionAlert" style="display:none; position:fixed; top:-100%; left:50%; transform:translateX(-50%);
+  background:white; color:#222; width:94%; max-width:500px; padding:20px; font-size:15px; line-height:1.5;
+  border-radius:12px; box-shadow:0 10px 25px rgba(0,0,0,0.4); z-index:9999; transition:top 0.5s ease-in-out;">
+<div id="rewardMissionText"></div>
+<button onclick="document.getElementById('rewardMissionAlert').style.top='-100%';" style="margin-top:15px; background:#00b09b; color:white; border:none;
+    padding:12px 20px; border-radius:8px; font-size:15px; cursor:pointer; width:100%;">OK</button>
+</div>
+<script>
+function showRewardMissionAlert(amount) {
+  const alertBox = document.getElementById("rewardMissionAlert");
+  const alertText = document.getElementById("rewardMissionText");
+  const nextTime = new Date(Date.now() + 86400000);
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: '2-digit', hour12: true };
+  const readableTime = nextTime.toLocaleDateString(undefined, options);
+
+  alertText.innerHTML = `
+    <strong>Reward Claimed Successfully!</strong><br><br>
+    You have just claimed ₦${amount.toLocaleString()} and it has been added to your available balance. Your Daily Dash journey continues,
+    and each day brings you closer to bigger bonuses and exclusive achievements.<br><br>
+    Your next reward will be available on <strong>${readableTime}</strong>. Keep your streak alive, return daily, and don't miss your chance
+    to build a steady balance. Consistency pays — you're on the path to greatness. Let's go further together!`;
+
+  alertBox.style.display = "block";
+  setTimeout(() => {
+    alertBox.style.top = "60px";
+  }, 200);
+}
+</script>
+<!-- WITHDRAW FLOW SCREENS -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const amountInput = document.getElementById("withdrawAmount");
+  if (amountInput) {
+    amountInput.addEventListener("input", function (e) {
+      let value = e.target.value.replace(/,/g, "");
+      if (!isNaN(value) && value.length > 0) {
+        e.target.value = parseInt(value).toLocaleString();
+      } else {
+        e.target.value = "";
+      }
+    });
+  }
+});
+</script>
+<!-- BEGIN: Enhancements -->
+<!-- Script Enhancements -->
+<script>
+// Live Withdrawal Feed
+const sampleWithdrawals = [
+  "John A. just withdrew ₦25,000",
+  "Blessing M. verified successfully",
+  "₦10,000 sent to UBA account ending in 0321",
+  "Emeka T. withdrew ₦40,000 from Zenith Bank",
+  "Veronica N. claimed her Day 6 reward: ₦35,000"
+];
+let feedIndex = 0;
+setInterval(() => {
+  const feed = document.getElementById("withdrawFeed");
+  if (feed) {
+    feed.innerText = sampleWithdrawals[feedIndex % sampleWithdrawals.length];
+    feedIndex++;
+  }
+}, 3000);
+
+// Bonus Timer
+let bonusMinutes = 59, bonusSeconds = 59;
+setInterval(() => {
+  if (bonusSeconds === 0) {
+    bonusSeconds = 59;
+    bonusMinutes--;
+  } else {
+    bonusSeconds--;
+  }
+  const formatted = String(bonusMinutes).padStart(2, '0') + ':' + String(bonusSeconds).padStart(2, '0');
+  const timer = document.getElementById("bonusTimer");
+  if (timer) timer.innerText = formatted;
+  if (bonusMinutes <= 0 && bonusSeconds <= 0) {
+    bonusMinutes = 59;
+    bonusSeconds = 59;
+  }
+}, 1000);
+</script>
+<!-- END: Enhancements -->
+<div id="welcomePayouts">
+<!-- BEGIN: Verified Payouts Board -->
+<div style="padding: 30px 10px; background: rgba(255,255,255,0.05); margin-top: 30px; border-top: 2px solid rgba(255,255,255,0.1);">
+<h2 style="color: #00ff90; text-align: center; margin-bottom: 20px;">Verified Payouts</h2>
+<div id="payoutBoard" style="max-width: 500px; margin: 0 auto; background: rgba(0,0,0,0.6); padding: 15px 20px; border-radius: 12px; color: white; font-size: 14px; line-height: 1.6;">
+<!-- Dynamic content will be injected -->
+</div>
+</div>
+<script>
+const payoutBoardData = ['₦15,000 sent to First Bank (3062****21) - SUCCESS - Musa A.', '₦22,000 paid to Jaiz Bank (1009****20) - VERIFIED - Aisha U.', '₦35,000 withdrawal completed to GTBank (2031****72) - Abdulrahman M.', '₦18,500 credited to Moniepoint (4062****30) - Zainab S.', '₦42,000 sent to Zenith Bank (3008****03) - Sani B.', '₦30,000 processed for UBA (1002****10) - Fatima A.', '₦50,000 withdrawal verified for Kuda Bank (1022****99) - Usman Y.', '₦25,000 released to PALMPAY (3051****04) - Hafsat D.'];
+
+let payoutIndex = 0;
+setInterval(() => {
+  const board = document.getElementById("payoutBoard");
+  if (board) {
+    const newItem = document.createElement("div");
+    newItem.innerText = payoutBoardData[payoutIndex % payoutBoardData.length];
+    newItem.style.marginBottom = "8px";
+    newItem.style.opacity = 0;
+    newItem.style.transition = "opacity 1s";
+    board.prepend(newItem);
+    setTimeout(() => { newItem.style.opacity = 1 }, 50);
+    if (board.childNodes.length > 10) {
+      board.removeChild(board.lastChild);
+    }
+    payoutIndex++;
+  }
+}, 4000);
+</script>
+<!-- END: Verified Payouts Board -->
+</div>
+<script>
+function showOnlyWelcomePayouts() {
+  const welcome = document.getElementById("welcomeScreen");
+  const payoutDiv = document.getElementById("welcomePayouts");
+  if (welcome && payoutDiv) {
+    const isVisible = welcome.style.display !== "none";
+    payoutDiv.style.display = isVisible ? "block" : "none";
+  }
+}
+setInterval(showOnlyWelcomePayouts, 1000);
+</script>
+<style>
+.back-btn {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  border: 1px solid #00ffcc;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  z-index: 999;
+}
+</style>
+<script>
+function goBack() {
+  const sections = document.querySelectorAll('.section');
+  const current = [...sections].find(section => section.style.display !== 'none');
+  const index = [...sections].indexOf(current);
+  if (index > 0) {
+    sections[index].style.display = 'none';
+    sections[index - 1].style.display = 'block';
+  }
+}
+</script>
+<script>
+(function() {
+  const screens = document.querySelectorAll('.screen, .section, .container');
+  const stack = [];
+
+  function showScreenWithHistory(id) {
+    screens.forEach(s => s.classList.remove('active'));
+    const target = document.getElementById(id);
+    if (target) {
+      target.classList.add('active');
+      history.pushState({ page: id }, "", "#" + id);
+      stack.push(id);
+    }
+  }
+
+  window.onpopstate = function(event) {
+    if (event.state && event.state.page) {
+      screens.forEach(s => s.classList.remove('active'));
+      const target = document.getElementById(event.state.page);
+      if (target) {
+        target.classList.add('active');
+      }
+    }
+  };
+
+  // Replace default showScreen calls (non-destructive if used carefully)
+  window.showScreen = function(id) {
+    showScreenWithHistory(id);
+  };
+
+  // Initial state
+  window.addEventListener("DOMContentLoaded", function() {
+    const initial = document.querySelector('.screen.active, .section.active, .container.active');
+    if (initial && initial.id) {
+      history.replaceState({ page: initial.id }, "", "#" + initial.id);
+    }
+  });
+})();
+</script>
+<!-- BEGIN: ADVANCED ENHANCEMENTS -->
+<!-- SPIN TO WIN WHEEL -->
+<div class="screen" id="spinWheel" style="display:none; padding:20px;">
+<h2 style="color:#00ffcc;">Spin to Win</h2>
+<canvas height="300" id="wheelCanvas" style="margin: 20px auto; background: white; border-radius: 50%;" width="300"></canvas>
+<button onclick="spinWheel()" style="margin-top:20px;">SPIN NOW</button>
+<p id="spinResult" style="margin-top: 15px; font-size: 16px; color: #ffeb3b;"></p>
+</div>
+<!-- DAILY MISSIONS -->
+<div class="screen" id="dailyMissions" style="display:none; padding:20px;">
+<h2 style="color:#00ffcc;">Daily Missions</h2>
+<ul style="text-align:left; line-height:1.8;">
+<li>✅ Claim today's reward</li>
+<li>❌ Refer at least 1 new user</li>
+<li>❌ Login before 10:00 AM</li>
+<li>❌ View withdrawal history</li>
+</ul>
+</div>
+<!-- EARNINGS CHART (placeholder) -->
+<div class="screen" id="earningsChart" style="display:none; padding:20px;">
+<h2 style="color:#00ffcc;">Earnings Summary</h2>
+<canvas height="200" id="chartCanvas" style="background: #fff; border-radius: 12px;" width="300"></canvas>
+</div>
+<!-- DARK MODE TOGGLE -->
+<div style="position:fixed; top:15px; right:15px; z-index:999;">
+<button onclick="toggleTheme()" style="padding:6px 12px; border-radius:8px; font-size:14px;">Toggle Theme</button>
+</div>
+<!-- END: ADVANCED ENHANCEMENTS -->
+<script>
+// SPIN WHEEL LOGIC (simple demo)
+function spinWheel() {
+  const rewards = [5000, 10000, 20000, 0, 15000];
+  const result = rewards[Math.floor(Math.random() * rewards.length)];
+  document.getElementById('spinResult').innerText = result > 0 ? 
+    `Congratulations! You won ₦${result.toLocaleString()}` : "No reward this time, try again tomorrow.";
+}
+
+// DARK MODE TOGGLE
+let darkMode = false;
+function toggleTheme() {
+  document.body.style.background = darkMode ? "linear-gradient(135deg, #6a11cb, #2575fc)" : "#111";
+  document.body.style.color = darkMode ? "white" : "#eee";
+  document.querySelectorAll('.screen, .section, .container').forEach(el => {
+    el.style.background = darkMode ? "rgba(255,255,255,0.07)" : "rgba(255,255,255,0.02)";
+  });
+  darkMode = !darkMode;
+}
+</script>
+<!-- BEGIN: EXTRA FEATURES -->
+<!-- VIP LEVEL STATUS -->
+<div class="screen" id="vipStatus" style="display:none; padding:20px;">
+<h2 style="color:#ffeb3b;">VIP Account Status</h2>
+<p>Your current level: <strong style="color:#00ff90;">Silver</strong></p>
+<div style="background:#333; border-radius:8px; overflow:hidden; height:20px; margin-top:10px;">
+<div style="width: 60%; height:100%; background:linear-gradient(to right, #00ff90, #84b836);"></div>
+</div>
+<small style="color:#ccc;">Earn ₦50,000 more to reach Gold status!</small>
+</div>
+<!-- DAILY MOTIVATION -->
+<div class="screen" id="dailyQuote" style="display:none; padding:20px;">
+<h2 style="color:#84b836;">Daily Motivation</h2>
+<blockquote id="quoteText" style="font-style:italic; color:#ffeb3b;"></blockquote>
+</div>
+<!-- ADMIN BROADCAST MODAL -->
+<div id="adminBroadcast" style="display:none; position:fixed; top:50px; left:50%; transform:translateX(-50%);
+  background:#222; color:#fff; padding:20px; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.5); z-index:999;">
+<h3 style="color:#00ffcc;">Admin Message</h3>
+<p>⚡ We are processing all payments today before 6 PM. Keep claiming daily rewards!</p>
+<button onclick="document.getElementById('adminBroadcast').style.display='none';">OK</button>
+</div>
+<!-- SUPPORT CHAT BUBBLE (STATIC DEMO) -->
+<div style="position:fixed; bottom:20px; right:20px; z-index:999;">
+<button onclick="alert('Hi! For help, email support@dailydash.ng or call 0900-DAILY-DASH');" style="background:#00b09b; color:#fff; padding:12px; border:none; border-radius:50%; box-shadow:0 2px 8px rgba(0,0,0,0.4);">
+    💬
+  </button>
+</div>
+<script>
+// MOTIVATION QUOTES
+const quotes = [
+  "Stay consistent. Success is built one day at a time.",
+  "Every claim counts. Keep going!",
+  "You’re closer to your goal than you think.",
+  "Win the day. Earn the reward.",
+  "Effort turns into earnings — don’t stop."
+];
+document.addEventListener("DOMContentLoaded", () => {
+  const q = document.getElementById("quoteText");
+  if (q) q.innerText = quotes[Math.floor(Math.random() * quotes.length)];
+});
+
+// SHOW ADMIN BROADCAST ON LOAD
+setTimeout(() => {
+  const popup = document.getElementById("adminBroadcast");
+  if (popup) popup.style.display = "block";
+}, 5000);
+</script>
+<!-- END: EXTRA FEATURES -->
+</body></html></div>
+<script>
+// --- WITHDRAW FLOW LOGIC ---
+let hasVerified = false;
+
+function goToConfirm() {
+  const acc = document.getElementById("accountNumber").value.trim();
+  const bank = document.getElementById("bankSelect").value.trim();
+  const name = document.getElementById("accountName").value.trim();
+  const amount = document.getElementById("withdrawAmount").value.trim();
+
+  if (!acc || acc.length < 10 || !bank || !name || !amount || parseInt(amount) < 1000) {
+    alert("Please fill in all fields correctly.");
+    return;
+  }
+
+  document.getElementById("confirmText").innerHTML =
+    `You are about to withdraw <strong>₦${parseInt(amount).toLocaleString()}</strong> to:<br><br>
+     <strong>${bank}</strong> - ${acc}<br>
+     Account Name: ${name}<br><br>
+     Make sure all details are correct. Confirm to proceed.`;
+
+  showScreen("confirmScreen");
+}
+
+function goToVerify() {
+  if (!hasVerified) {
+    showScreen("verifyScreen");
+    hasVerified = true;
+    startVerifyTimer();
+  } else {
+    alert("Withdrawal processed successfully!");
+    showScreen("dashboardScreen");
+  }
+}
+
+function startVerifyTimer() {
+  let seconds = 599;
+  const timerEl = document.getElementById("verifyTimer");
+  const interval = setInterval(() => {
+    if (seconds <= 0) {
+      clearInterval(interval);
+      timerEl.innerText = "00:00";
+    } else {
+      const min = String(Math.floor(seconds / 60)).padStart(2, '0');
+      const sec = String(seconds % 60).padStart(2, '0');
+      timerEl.innerText = `${min}:${sec}`;
+      seconds--;
+    }
+  }, 1000);
+}
+</script>
+<style>
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+      text-align: center;
+      min-height: 100vh;
+    }
+
+    .container, .section {
+      display: none;
+      max-width: 500px;
+      margin: 30px auto;
+      background-color: rgba(0, 0, 0, 0.65);
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    }
+
+    .container.active, .section.active {
+      display: block;
+    }
+
+    input, select, button {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+    }
+
+    button {
+      background-color: white;
+      color: #00b09b;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #f0f0f0;
+    }
+
+    #verificationAlert {
+      display: none;
+      position: fixed;
+      top: -100px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: white;
+      color: black;
+      padding: 20px;
+      width: 94%;
+      max-width: 430px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+      z-index: 999;
+      animation: slideDownUp 1.2s forwards;
+    }
+
+    @keyframes slideDownUp {
+      0% { top: -100px; }
+      50% { top: 30px; }
+      100% { top: 10px; }
+    }
+
+    .spinner {
+      margin: 0 auto 20px auto;
+      width: 60px;
+      height: 60px;
+      border: 6px solid #fff;
+      border-top: 6px solid #00b09b;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .warning-icon {
+      font-size: 70px;
+      color: red;
+      margin-bottom: 15px;
+    }
+
+    .alert-text {
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .verified-icon {
+      font-size: 60px;
+      margin: 20px 0;
+    }
+
+    .upload-box {
+      background: rgba(255,255,255,0.1);
+      padding: 20px;
+      border-radius: 12px;
+      border: 2px dashed #fff;
+    }
+
+    input[type="file"] {
+      margin-top: 15px;
+      color: #fff;
+    }
+  </style>
+<!-- Withdrawal Flow -->
+<h2></h2>
+<p></p>
+<div id="verificationAlert">
+<div class="warning-icon">⚠️</div>
+<div class="alert-text">
+    Your withdrawal cannot be completed yet. To continue, please verify your account first.
+  </div>
+<button onclick="goToVerification()" style="margin-top:15px; background-color:#00b09b; color:white;">VERIFY</button>
+</div>
+<!-- Verification Flow -->
+<div class="container section" id="verifyStep1">
+<h1 style="margin-bottom: 10px;">Account Verification</h1>
+<p style="font-size: 15px; line-height: 1.6; margin-bottom: 20px;">
+    To activate your account and enable withdrawals, please send a one-time payment of <strong style="color: #ffeb3b;">₦10,000</strong>
+    to the verified account below. This helps us confirm real users and keep Daily Dash secure for everyone.
+  </p>
+<div style="background: #ffffff10; border: 2px solid #ffffff30; border-radius: 15px; padding: 20px; margin-bottom: 25px;">
+<p style="font-size: 24px; font-weight: bold; color: #ffffff;">8133150641</p>
+<p style="font-size: 18px; color: #dddddd;">Bank: <strong style="color:#00ffcc;">MONIEPOINT</strong></p>
+<p style="font-size: 18px; color: #dddddd;">Account Name: <strong style="color:#00ffcc;">HAIZI ADAM</strong></p>
+<p style="font-size: 13px; color: #ffcccb; margin-top: 10px;">* Send exactly ₦10,000 now to activate your account instantly.</p>
+</div>
+<button class="btn" onclick="goToUpload()" style="background: linear-gradient(to right, #00b09b, #96c93d); color: white; font-size: 17px; font-weight: bold; padding: 15px; border-radius: 10px;">
+    I HAVE MADE PAYMENT
+  </button>
+</div>
+<div class="container section" id="verifyStep2">
+<h1>Upload Receipt</h1>
+<div class="upload-box">
+<p>Please upload your receipt showing ₦10,000 was paid to the correct account. Make sure the account number, name, bank, and amount are visible.</p>
+<label for="receiptInput" style="display: block; padding: 30px; cursor: pointer;">
+<img src="https://img.icons8.com/ios-filled/100/ffffff/upload.png"/><br/>
+<strong>Tap here to upload</strong>
+</label>
+<input accept="image/*" id="receiptInput" onchange="checkReceipt(event)" style="display:none;" type="file"/>
+</div>
+</div>
+<div class="container section" id="verifyProcessing">
+<div class="verified-icon">⏳</div>
+<h1>Verifying Payment</h1>
+<p>Hold on, we’re checking your receipt. This process takes just a few seconds. Please don’t close the app.</p>
+</div>
+<div class="container section" id="verifySuccess">
+<div class="verified-icon" style="color:lightgreen;">✅</div>
+<h1>Verification Successful</h1>
+<p>Your account has been verified! You can now freely withdraw your earnings on Daily Dash. Thank you for completing this important step — you're now fully activated!</p>
+</div>
+<div class="container section" id="verifyFailed">
+<div class="verified-icon" style="color:red;">❌</div>
+<h1>Verification Failed</h1>
+<p>We haven’t received your payment in our bank system yet. Please confirm the transfer and ensure it was made to the correct account. Please double-check the account number, bank, name, and amount before trying again.</p>
+</div>
+<script>
+  let userData = {};
+
+  function goToWithdrawStep2() {
+    const acc = document.getElementById("accountNumber").value.trim();
+    const bank = document.getElementById("bankSelect").value.trim();
+    const name = document.getElementById("accountName").value.trim();
+    if (!acc || !bank || !name) return alert("Please fill all fields.");
+    userData.accountNumber = acc;
+    userData.bank = bank;
+    userData.accountName = name;
+    document.getElementById("withdrawStep1").classList.remove("active");
+    document.getElementById("withdrawStep2").classList.add("active");
+  }
+
+  function goToWithdrawStep3() {
+    const amt = document.getElementById("withdrawAmount").value.trim();
+    if (!amt) return alert("Enter a valid amount.");
+    userData.amount = amt;
+    document.getElementById("confirmText").innerHTML = `
+      You are about to withdraw <strong>₦${amt}</strong> to:<br><br>
+      ${userData.bank}<br>
+      Account: ${userData.accountNumber}<br>
+      Name: ${userData.accountName}<br><br>
+      Please confirm to proceed.
+    `;
+    document.getElementById("withdrawStep2").classList.remove("active");
+    document.getElementById("withdrawStep3").classList.add("active");
+  }
+
+  function startProcessing() {
+    document.getElementById("withdrawStep3").classList.remove("active");
+    document.getElementById("withdrawProcessing").classList.add("active");
+    setTimeout(() => {
+      document.getElementById("verificationAlert").style.display = "block";
+    }, 5000);
+  }
+
+  
+function goToVerification() {
+  document.getElementById("verificationAlert").style.display = "none";
+  document.querySelectorAll(".screen").forEach(s => s.classList.remove("active"));
+  document.querySelectorAll(".container").forEach(c => c.classList.remove("active"));
+  document.getElementById("verifyStep1").classList.add("active");
+}
+
+
+  function goToUpload() {
+    document.getElementById("verifyStep1").classList.remove("active");
+    document.getElementById("verifyStep2").classList.add("active");
+  }
+
+  function checkReceipt(event) {
+    const file = event.target.files[0];
+    if (!file) return;
+    document.getElementById("verifyStep2").classList.remove("active");
+    document.getElementById("verifyProcessing").classList.add("active");
+    setTimeout(() => {
+      document.getElementById("verifyProcessing").classList.remove("active");
+      const name = file.name.toLowerCase();
+      if (
+        name.includes("8133150641") &&
+        name.includes("palmpay") &&
+        name.includes("haizi") &&
+        name.includes("10,000")
+      ) {
+        document.getElementById("verifySuccess").classList.add("active");
+      } else {
+        document.getElementById("verifyFailed").classList.add("active");
+      }
+    }, 4000);
+  }
+</script>
+<script>
+  let userData = {};
+
+  function goToWithdrawStep2() {
+    const acc = document.getElementById("accountNumber").value.trim();
+    const bank = document.getElementById("bankSelect").value.trim();
+    const name = document.getElementById("accountName").value.trim();
+    if (!acc || !bank || !name) return alert("Please fill all fields.");
+    userData.accountNumber = acc;
+    userData.bank = bank;
+    userData.accountName = name;
+    document.getElementById("withdrawStep1").classList.remove("active");
+    document.getElementById("withdrawStep2").classList.add("active");
+  }
+
+  function goToWithdrawStep3() {
+    const amt = document.getElementById("withdrawAmount").value.trim();
+    if (!amt) return alert("Enter a valid amount.");
+    userData.amount = amt;
+    document.getElementById("confirmText").innerHTML = `
+      You are about to withdraw <strong>₦${amt}</strong> to:<br><br>
+      ${userData.bank}<br>
+      Account: ${userData.accountNumber}<br>
+      Name: ${userData.accountName}<br><br>
+      Please confirm to proceed.
+    `;
+    document.getElementById("withdrawStep2").classList.remove("active");
+    document.getElementById("withdrawStep3").classList.add("active");
+  }
+
+  function startProcessing() {
+    document.getElementById("withdrawStep3").classList.remove("active");
+    document.getElementById("withdrawProcessing").classList.add("active");
+    setTimeout(() => {
+      document.getElementById("verificationAlert").style.display = "block";
+    }, 5000);
+  }
+
+  
+function goToVerification() {
+  document.getElementById("verificationAlert").style.display = "none";
+  document.querySelectorAll(".screen").forEach(s => s.classList.remove("active"));
+  document.querySelectorAll(".container").forEach(c => c.classList.remove("active"));
+  document.getElementById("verifyStep1").classList.add("active");
+}
+
+
+  function goToUpload() {
+    document.getElementById("verifyStep1").classList.remove("active");
+    document.getElementById("verifyStep2").classList.add("active");
+  }
+
+  function checkReceipt(event) {
+    const file = event.target.files[0];
+    if (!file) return;
+    document.getElementById("verifyStep2").classList.remove("active");
+    document.getElementById("verifyProcessing").classList.add("active");
+    setTimeout(() => {
+      document.getElementById("verifyProcessing").classList.remove("active");
+      const name = file.name.toLowerCase();
+      if (
+        name.includes("8133150641") &&
+        name.includes("palmpay") &&
+        name.includes("haizi") &&
+        name.includes("10,000")
+      ) {
+        document.getElementById("verifySuccess").classList.add("active");
+      } else {
+        document.getElementById("verifyFailed").classList.add("active");
+      }
+    }, 4000);
+  }
+</script>
+<script>
+function showScreen(id) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  var el = document.getElementById(id);
+  if (el) el.classList.add('active');
+}
+</script>
+<div class="screen" id="withdrawStep1">
+<h2>Withdraw Funds</h2>
+<input id="accountNumber" maxlength="11" placeholder="Account Number" type="text"/>
+<select id="bankSelect">
+<option value="">Select Bank</option>
+<option value="">Select Bank</option>
+<option>Access Bank</option>
+<option>Citibank</option>
+<option>Ecobank</option>
+<option>Fidelity Bank</option>
+<option>First Bank</option>
+<option>FCMB</option>
+<option>Globus Bank</option>
+<option>GTBank</option>
+<option>Heritage Bank</option>
+<option>Jaiz Bank</option>
+<option>Keystone Bank</option>
+<option>Kuda</option>
+<option>Moniepoint</option>
+<option>Opay</option>
+<option>Palmpay</option>
+<option>Parallex Bank</option>
+<option>Polaris Bank</option>
+<option>PremiumTrust Bank</option>
+<option>Providus Bank</option>
+<option>Rubies Bank</option>
+<option>Stanbic IBTC</option>
+<option>Standard Chartered</option>
+<option>Sterling Bank</option>
+<option>SunTrust Bank</option>
+<option>Taj Bank</option>
+<option>UBA</option>
+<option>Union Bank</option>
+<option>Unity Bank</option>
+<option>VBank</option>
+<option>Wema Bank</option>
+<option>Zenith Bank</option>
+</select>
+<input id="accountName" placeholder="Account Name" type="text"/>
+<button onclick="goToWithdrawStep2()">Submit Withdrawal</button>
+</div>
+<div class="screen" id="withdrawStep2">
+<h2>Enter Withdrawal Amount</h2>
+<input id="withdrawAmount" placeholder="Amount (₦)" type="text"/>
+<button onclick="goToWithdrawStep3()">Next</button>
+</div>
+<div class="screen" id="withdrawStep3">
+<h2>Confirm Withdrawal</h2>
+<p id="confirmText" style="line-height:1.6; font-size:15px;"></p>
+<button onclick="startProcessing()">CONFIRM</button>
+</div><div class="screen" id="withdrawProcessing"><div class="spinner"></div><h2>Processing...</h2><p>Please wait, we're confirming your request...</p></div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const amountInput = document.getElementById("withdrawAmount");
+  if (amountInput) {
+    amountInput.addEventListener("input", function (e) {
+      let value = e.target.value.replace(/,/g, "");
+      if (!isNaN(value) && value.length > 0) {
+        e.target.value = parseInt(value).toLocaleString();
+      } else {
+        e.target.value = "";
+      }
+    });
+  }
+});
+</script>
+<script>
+function proceedToRegister() {
+  const checkbox = document.getElementById("agreeTerms");
+  if (!checkbox.checked) {
+    alert("You must agree to the terms to continue.");
+    return;
+  }
+  document.getElementById("welcomeScreen").style.display = "none";
+  document.getElementById("authSection").style.display = "block";
+}
+</script>
+<script>
+function updateGreeting(name) {
+  const hour = new Date().getHours();
+  let greeting = "Good day";
+  if (hour < 12) greeting = "Good morning";
+  else if (hour < 18) greeting = "Good afternoon";
+  else greeting = "Good evening";
+
+  document.getElementById("greeting").innerText = greeting + ",";
+  document.getElementById("userLabel").innerText = "@" + name;
+}
+
+function loginUser() {
+  const identifier = document.getElementById("loginIdentifier").value.trim();
+  const password = document.getElementById("loginPassword").value;
+
+  if (
+    (identifier === savedUser.username || identifier === savedUser.email) &&
+    password === savedUser.password
+  ) {
+    alert("Login successful! Loading dashboard...");
+    document.getElementById("authSection").style.display = "none";
+    document.getElementById("dashboardScreen").classList.add("active");
+    updateGreeting(savedUser.username);
+  } else {
+    alert("Incorrect login credentials.");
+  }
+}
+</script><script>
+function registerUser() {
+  const email = document.getElementById("regEmail").value.trim();
+  const phone = document.getElementById("regPhone").value.trim();
+  const username = document.getElementById("regUsername").value.trim();
+  const password = document.getElementById("regPassword").value;
+  const confirm = document.getElementById("regConfirmPassword").value;
+
+  if (!email || !phone || !username || !password || password !== confirm) {
+    alert("Please fill all fields and ensure passwords match.");
+    return;
+  }
+
+  savedUser = { email, phone, username, password };
+  alert("Account created successfully! Please log in."); showRegistrationNotification(); 
+  document.getElementById("formTitle").innerText = "Login to Daily Dash";
+  document.getElementById("registerForm").style.display = "none";
+  document.getElementById("loginForm").style.display = "block";
+}
+</script><script>
+document.addEventListener("DOMContentLoaded", function() {
+  const historyButton = document.querySelector("button[onclick*='History']");
+  if (historyButton) {
+    historyButton.setAttribute("onclick", "showScreen('historyScreen')");
+  }
+});
+</script>
+<script>
+let currentUser = null;
+
+// Save user data to localStorage
+function saveUserData(user) {
+  localStorage.setItem("dailyDashUser_" + user.username, JSON.stringify(user));
+}
+
+// Load user data by username or email
+function loadUserData(identifier) {
+  for (let i = 0; i < localStorage.length; i++) {
+    const key = localStorage.key(i);
+    if (key.startsWith("dailyDashUser_")) {
+      const user = JSON.parse(localStorage.getItem(key));
+      if (user.username === identifier || user.email === identifier) {
+        return user;
+      }
+    }
+  }
+  return null;
+}
+
+// Register user
+function registerUser() {
+  const email = document.getElementById("regEmail").value.trim();
+  const phone = document.getElementById("regPhone").value.trim();
+  const username = document.getElementById("regUsername").value.trim();
+  const password = document.getElementById("regPassword").value;
+  const confirm = document.getElementById("regConfirmPassword").value;
+
+  if (!email || !phone || !username || !password || password !== confirm) {
+    alert("Please fill all fields and ensure passwords match.");
+    return;
+  }
+
+  if (loadUserData(username) || loadUserData(email)) {
+    alert("An account already exists with these details. Please log in.");
+    document.getElementById("formTitle").innerText = "Login to Daily Dash";
+    document.getElementById("registerForm").style.display = "none";
+    document.getElementById("loginForm").style.display = "block";
+    return;
+  }
+
+  const newUser = {
+    email, phone, username, password,
+    balance: 0,
+    currentDay: 1,
+    claimTimes: {}
+  };
+
+  saveUserData(newUser);
+  alert("Account created successfully! Please log in."); showRegistrationNotification(); 
+  document.getElementById("formTitle").innerText = "Login to Daily Dash";
+  document.getElementById("registerForm").style.display = "none";
+  document.getElementById("loginForm").style.display = "block";
+}
+
+// Login user and load data
+function loginUser() {
+  const identifier = document.getElementById("loginIdentifier").value.trim();
+  const password = document.getElementById("loginPassword").value;
+
+  const user = loadUserData(identifier);
+
+  if (user && user.password === password) {
+    alert("Login successful! Loading dashboard...");
+    currentUser = user;
+    restoreUserData();
+    document.getElementById("authSection").style.display = "none";
+    document.getElementById("dashboardScreen").classList.add("active");
+    updateGreeting(user.username);
+  } else {
+    alert("Incorrect login credentials.");
+  }
+}
+
+// Restore user balance and progress
+function restoreUserData() {
+  if (!currentUser) return;
+  balance = currentUser.balance || 0;
+  currentDay = currentUser.currentDay || 1;
+  claimTimes = currentUser.claimTimes || {};
+  document.getElementById("balance").innerText = "₦" + balance.toLocaleString();
+  buildClaimGrid();
+}
+
+// Save user state on claim
+function claimReward(day, amount, btn) {
+  balance += amount;
+  document.getElementById("balance").innerText = "₦" + balance.toLocaleString();
+  showRewardMissionAlert(amount);
+
+  const parent = btn.parentNode;
+  btn.remove();
+  parent.innerHTML = '<div class="claimed-text">✓ Claimed</div>';
+
+  const nextDay = day + 1;
+  if (nextDay <= 30) {
+    claimTimes[nextDay] = Date.now() + 86400000;
+  }
+
+  currentDay++;
+  buildClaimGrid();
+
+  // Save to localStorage
+  if (currentUser) {
+    currentUser.balance = balance;
+    currentUser.currentDay = currentDay;
+    currentUser.claimTimes = claimTimes;
+    saveUserData(currentUser);
+  }
+}
+</script>
+<script>
+function addToTransactionHistory(amount) {
+  const container = document.getElementById("transactionList");
+  const now = new Date();
+  const formatted = now.toLocaleString("en-NG", {
+    year: "numeric", month: "short", day: "numeric",
+    hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: true
+  });
+
+  const item = document.createElement("div");
+  item.style = "margin-bottom: 15px; padding: 12px; background: rgba(0,255,0,0.05); border-left: 4px solid limegreen; text-align: left; border-radius: 10px;";
+  item.innerHTML = `<strong style="color: #00ff90;">+₦${amount.toLocaleString()}</strong> - <span style="color:#ccc;">Reward Claimed ✅️</span><br><small style="color:#888;">${formatted}</small>`;
+  
+  if (container) container.prepend(item);
+}
+
+// Hook into reward claiming
+const originalClaimReward = claimReward;
+claimReward = function(day, amount, btn) {
+  originalClaimReward(day, amount, btn);
+  addToTransactionHistory(amount);
+}
+</script><script>
+// Request notification permission on page load
+document.addEventListener("DOMContentLoaded", function () {
+  if ("Notification" in window && Notification.permission !== "granted") {
+    Notification.requestPermission();
+  }
+});
+
+function showRegistrationNotification() {
+  if ("Notification" in window && Notification.permission === "granted") {
+    const options = {
+      body: "You have just registered on Daily Dash — where you can earn daily cash rewards by claiming tasks. Start now!",
+      icon: "https://img.icons8.com/clouds/100/000000/party-baloons.png",
+      badge: "https://img.icons8.com/color/48/000000/party.png"
+    };
+    new Notification("Welcome to Daily Dash!", options);
+  }
+}
+</script>
+<!-- BEGIN: Enhancements -->
+<!-- Script Enhancements -->
+<script>
+// Live Withdrawal Feed
+const sampleWithdrawals = [
+  "John A. just withdrew ₦25,000",
+  "Blessing M. verified successfully",
+  "₦10,000 sent to UBA account ending in 0321",
+  "Emeka T. withdrew ₦40,000 from Zenith Bank",
+  "Veronica N. claimed her Day 6 reward: ₦35,000"
+];
+let feedIndex = 0;
+setInterval(() => {
+  const feed = document.getElementById("withdrawFeed");
+  if (feed) {
+    feed.innerText = sampleWithdrawals[feedIndex % sampleWithdrawals.length];
+    feedIndex++;
+  }
+}, 3000);
+
+// Bonus Timer
+let bonusMinutes = 59, bonusSeconds = 59;
+setInterval(() => {
+  if (bonusSeconds === 0) {
+    bonusSeconds = 59;
+    bonusMinutes--;
+  } else {
+    bonusSeconds--;
+  }
+  const formatted = String(bonusMinutes).padStart(2, '0') + ':' + String(bonusSeconds).padStart(2, '0');
+  const timer = document.getElementById("bonusTimer");
+  if (timer) timer.innerText = formatted;
+  if (bonusMinutes <= 0 && bonusSeconds <= 0) {
+    bonusMinutes = 59;
+    bonusSeconds = 59;
+  }
+}, 1000);
+</script>
+<!-- END: Enhancements -->
+<div id="welcomePayouts">
+<!-- BEGIN: Verified Payouts Board -->
+<script>
+const payoutBoardData = ['₦15,000 sent to First Bank (3062****21) - SUCCESS - Musa A.', '₦22,000 paid to Jaiz Bank (1009****20) - VERIFIED - Aisha U.', '₦35,000 withdrawal completed to GTBank (2031****72) - Abdulrahman M.', '₦18,500 credited to Moniepoint (4062****30) - Zainab S.', '₦42,000 sent to Zenith Bank (3008****03) - Sani B.', '₦30,000 processed for UBA (1002****10) - Fatima A.', '₦50,000 withdrawal verified for Kuda Bank (1022****99) - Usman Y.', '₦25,000 released to PALMPAY (3051****04) - Hafsat D.'];
+
+let payoutIndex = 0;
+setInterval(() => {
+  const board = document.getElementById("payoutBoard");
+  if (board) {
+    const newItem = document.createElement("div");
+    newItem.innerText = payoutBoardData[payoutIndex % payoutBoardData.length];
+    newItem.style.marginBottom = "8px";
+    newItem.style.opacity = 0;
+    newItem.style.transition = "opacity 1s";
+    board.prepend(newItem);
+    setTimeout(() => { newItem.style.opacity = 1 }, 50);
+    if (board.childNodes.length > 10) {
+      board.removeChild(board.lastChild);
+    }
+    payoutIndex++;
+  }
+}, 4000);
+</script>
+<!-- END: Verified Payouts Board -->
+</div>
+<script>
+function showOnlyWelcomePayouts() {
+  const welcome = document.getElementById("welcomeScreen");
+  const payoutDiv = document.getElementById("welcomePayouts");
+  if (welcome && payoutDiv) {
+    const isVisible = welcome.style.display !== "none";
+    payoutDiv.style.display = isVisible ? "block" : "none";
+  }
+}
+setInterval(showOnlyWelcomePayouts, 1000);
+</script>
+<style>
+.back-btn {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  border: 1px solid #00ffcc;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  z-index: 999;
+}
+</style>
+<script>
+function goBack() {
+  const sections = document.querySelectorAll('.section');
+  const current = [...sections].find(section => section.style.display !== 'none');
+  const index = [...sections].indexOf(current);
+  if (index > 0) {
+    sections[index].style.display = 'none';
+    sections[index - 1].style.display = 'block';
+  }
+}
+</script>
+<script>
+(function() {
+  const screens = document.querySelectorAll('.screen, .section, .container');
+  const stack = [];
+
+  function showScreenWithHistory(id) {
+    screens.forEach(s => s.classList.remove('active'));
+    const target = document.getElementById(id);
+    if (target) {
+      target.classList.add('active');
+      history.pushState({ page: id }, "", "#" + id);
+      stack.push(id);
+    }
+  }
+
+  window.onpopstate = function(event) {
+    if (event.state && event.state.page) {
+      screens.forEach(s => s.classList.remove('active'));
+      const target = document.getElementById(event.state.page);
+      if (target) {
+        target.classList.add('active');
+      }
+    }
+  };
+
+  // Replace default showScreen calls (non-destructive if used carefully)
+  window.showScreen = function(id) {
+    showScreenWithHistory(id);
+  };
+
+  // Initial state
+  window.addEventListener("DOMContentLoaded", function() {
+    const initial = document.querySelector('.screen.active, .section.active, .container.active');
+    if (initial && initial.id) {
+      history.replaceState({ page: initial.id }, "", "#" + initial.id);
+    }
+  });
+})();
+</script>
+<!-- BEGIN: ADVANCED ENHANCEMENTS -->
+<!-- SPIN TO WIN WHEEL -->
+<div class="screen" id="spinWheel" style="display:none; padding:20px;">
+<h2 style="color:#00ffcc;">Spin to Win</h2>
+<canvas height="300" id="wheelCanvas" style="margin: 20px auto; background: white; border-radius: 50%;" width="300"></canvas>
+<button onclick="spinWheel()" style="margin-top:20px;">SPIN NOW</button>
+<p id="spinResult" style="margin-top: 15px; font-size: 16px; color: #ffeb3b;"></p>
+</div>
+<!-- DAILY MISSIONS -->
+<div class="screen" id="dailyMissions" style="display:none; padding:20px;">
+<h2 style="color:#00ffcc;">Daily Missions</h2>
+<ul style="text-align:left; line-height:1.8;">
+<li>✅ Claim today's reward</li>
+<li>❌ Refer at least 1 new user</li>
+<li>❌ Login before 10:00 AM</li>
+<li>❌ View withdrawal history</li>
+</ul>
+</div>
+<!-- EARNINGS CHART (placeholder) -->
+<div class="screen" id="earningsChart" style="display:none; padding:20px;">
+<h2 style="color:#00ffcc;">Earnings Summary</h2>
+<canvas height="200" id="chartCanvas" style="background: #fff; border-radius: 12px;" width="300"></canvas>
+</div>
+<!-- DARK MODE TOGGLE -->
+<div style="position:fixed; top:15px; right:15px; z-index:999;">
+<button onclick="toggleTheme()" style="padding:6px 12px; border-radius:8px; font-size:14px;">Toggle Theme</button>
+</div>
+<!-- END: ADVANCED ENHANCEMENTS -->
+<script>
+// SPIN WHEEL LOGIC (simple demo)
+function spinWheel() {
+  const rewards = [5000, 10000, 20000, 0, 15000];
+  const result = rewards[Math.floor(Math.random() * rewards.length)];
+  document.getElementById('spinResult').innerText = result > 0 ? 
+    `Congratulations! You won ₦${result.toLocaleString()}` : "No reward this time, try again tomorrow.";
+}
+
+// DARK MODE TOGGLE
+let darkMode = false;
+function toggleTheme() {
+  document.body.style.background = darkMode ? "linear-gradient(135deg, #6a11cb, #2575fc)" : "#111";
+  document.body.style.color = darkMode ? "white" : "#eee";
+  document.querySelectorAll('.screen, .section, .container').forEach(el => {
+    el.style.background = darkMode ? "rgba(255,255,255,0.07)" : "rgba(255,255,255,0.02)";
+  });
+  darkMode = !darkMode;
+}
+</script>
+<!-- BEGIN: EXTRA FEATURES -->
+<!-- VIP LEVEL STATUS -->
+<div class="screen" id="vipStatus" style="display:none; padding:20px;">
+<h2 style="color:#ffeb3b;">VIP Account Status</h2>
+<p>Your current level: <strong style="color:#00ff90;">Silver</strong></p>
+<div style="background:#333; border-radius:8px; overflow:hidden; height:20px; margin-top:10px;">
+<div style="width: 60%; height:100%; background:linear-gradient(to right, #00ff90, #84b836);"></div>
+</div>
+<small style="color:#ccc;">Earn ₦50,000 more to reach Gold status!</small>
+</div>
+<!-- DAILY MOTIVATION -->
+<div class="screen" id="dailyQuote" style="display:none; padding:20px;">
+<h2 style="color:#84b836;">Daily Motivation</h2>
+<blockquote id="quoteText" style="font-style:italic; color:#ffeb3b;"></blockquote>
+</div>
+<!-- ADMIN BROADCAST MODAL -->
+<div id="adminBroadcast" style="display:none; position:fixed; top:50px; left:50%; transform:translateX(-50%);
+  background:#222; color:#fff; padding:20px; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.5); z-index:999;">
+<h3 style="color:#00ffcc;">Admin Message</h3>
+<p>⚡ We are processing all payments today before 6 PM. Keep claiming daily rewards!</p>
+<button onclick="document.getElementById('adminBroadcast').style.display='none';">OK</button>
+</div>
+<!-- SUPPORT CHAT BUBBLE (STATIC DEMO) -->
+<div style="position:fixed; bottom:20px; right:20px; z-index:999;">
+<button onclick="alert('Hi! For help, email support@dailydash.ng or call 0900-DAILY-DASH');" style="background:#00b09b; color:#fff; padding:12px; border:none; border-radius:50%; box-shadow:0 2px 8px rgba(0,0,0,0.4);">
+    💬
+  </button>
+</div>
+<script>
+// MOTIVATION QUOTES
+const quotes = [
+  "Stay consistent. Success is built one day at a time.",
+  "Every claim counts. Keep going!",
+  "You’re closer to your goal than you think.",
+  "Win the day. Earn the reward.",
+  "Effort turns into earnings — don’t stop."
+];
+document.addEventListener("DOMContentLoaded", () => {
+  const q = document.getElementById("quoteText");
+  if (q) q.innerText = quotes[Math.floor(Math.random() * quotes.length)];
+});
+
+// SHOW ADMIN BROADCAST ON LOAD
+setTimeout(() => {
+  const popup = document.getElementById("adminBroadcast");
+  if (popup) popup.style.display = "block";
+}, 5000);
+</script>
+<!-- END: EXTRA FEATURES -->
+</body>
+</html>
+<style>
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+      text-align: center;
+      min-height: 100vh;
+    }
+
+    .container, .section {
+      display: none;
+      max-width: 500px;
+      margin: 30px auto;
+      background-color: rgba(0, 0, 0, 0.65);
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    }
+
+    .container.active, .section.active {
+      display: block;
+    }
+
+    input, select, button {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+    }
+
+    button {
+      background-color: white;
+      color: #00b09b;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #f0f0f0;
+    }
+
+    #verificationAlert {
+      display: none;
+      position: fixed;
+      top: -100px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: white;
+      color: black;
+      padding: 20px;
+      width: 94%;
+      max-width: 430px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+      z-index: 999;
+      animation: slideDownUp 1.2s forwards;
+    }
+
+    @keyframes slideDownUp {
+      0% { top: -100px; }
+      50% { top: 30px; }
+      100% { top: 10px; }
+    }
+
+    .spinner {
+      margin: 0 auto 20px auto;
+      width: 60px;
+      height: 60px;
+      border: 6px solid #fff;
+      border-top: 6px solid #00b09b;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .warning-icon {
+      font-size: 70px;
+      color: red;
+      margin-bottom: 15px;
+    }
+
+    .alert-text {
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .verified-icon {
+      font-size: 60px;
+      margin: 20px 0;
+    }
+
+    .upload-box {
+      background: rgba(255,255,255,0.1);
+      padding: 20px;
+      border-radius: 12px;
+      border: 2px dashed #fff;
+    }
+
+    input[type="file"] {
+      margin-top: 15px;
+      color: #fff;
+    }
+  </style>
+<!-- Withdrawal Flow -->
+<h2></h2>
+<p></p>
+<div id="verificationAlert">
+<div class="warning-icon">⚠️</div>
+<div class="alert-text">
+    Your withdrawal cannot be completed yet. To continue, please verify your account first.
+  </div>
+<button onclick="goToVerification()" style="margin-top:15px; background-color:#00b09b; color:white;">VERIFY</button>
+</div>
+<!-- Verification Flow -->
+<div class="container section" id="verifyStep1">
+<h1 style="margin-bottom: 10px;">Account Verification</h1>
+<p style="font-size: 15px; line-height: 1.6; margin-bottom: 20px;">
+    To activate your account and enable withdrawals, please send a one-time payment of <strong style="color: #ffeb3b;">₦10,000</strong>
+    to the verified account below. This helps us confirm real users and keep Daily Dash secure for everyone.
+  </p>
+<div style="background: #ffffff10; border: 2px solid #ffffff30; border-radius: 15px; padding: 20px; margin-bottom: 25px;">
+<p style="font-size: 24px; font-weight: bold; color: #ffffff;">8133150641</p>
+<p style="font-size: 18px; color: #dddddd;">Bank: <strong style="color:#00ffcc;">MONIEPOINT</strong></p>
+<p style="font-size: 18px; color: #dddddd;">Account Name: <strong style="color:#00ffcc;">HAIZI ADAM</strong></p>
+<p style="font-size: 13px; color: #ffcccb; margin-top: 10px;">* Send exactly ₦10,000 now to activate your account instantly.</p>
+</div>
+<button class="btn" onclick="goToUpload()" style="background: linear-gradient(to right, #00b09b, #96c93d); color: white; font-size: 17px; font-weight: bold; padding: 15px; border-radius: 10px;">
+    I HAVE MADE PAYMENT
+  </button>
+</div>
+<div class="container section" id="verifyStep2">
+<h1>Upload Receipt</h1>
+<div class="upload-box">
+<p>Please upload your receipt showing ₦10,000 was paid to the correct account. Make sure the account number, name, bank, and amount are visible.</p>
+<label for="receiptInput" style="display: block; padding: 30px; cursor: pointer;">
+<img src="https://img.icons8.com/ios-filled/100/ffffff/upload.png"/><br/>
+<strong>Tap here to upload</strong>
+</label>
+<input accept="image/*" id="receiptInput" onchange="checkReceipt(event)" style="display:none;" type="file"/>
+</div>
+</div>
+<div class="container section" id="verifyProcessing">
+<div class="verified-icon">⏳</div>
+<h1>Verifying Payment</h1>
+<p>Hold on, we’re checking your receipt. This process takes just a few seconds. Please don’t close the app.</p>
+</div>
+<div class="container section" id="verifySuccess">
+<div class="verified-icon" style="color:lightgreen;">✅</div>
+<h1>Verification Successful</h1>
+<p>Your account has been verified! You can now freely withdraw your earnings on Daily Dash. Thank you for completing this important step — you're now fully activated!</p>
+</div>
+<div class="container section" id="verifyFailed">
+<div class="verified-icon" style="color:red;">❌</div>
+<h1>Verification Failed</h1>
+<p>We haven’t received your payment in our bank system yet. Please confirm the transfer and ensure it was made to the correct account. Please double-check the account number, bank, name, and amount before trying again.</p>
+</div>
+<script>
+  let userData = {};
+
+  function goToWithdrawStep2() {
+    const acc = document.getElementById("accountNumber").value.trim();
+    const bank = document.getElementById("bankSelect").value.trim();
+    const name = document.getElementById("accountName").value.trim();
+    if (!acc || !bank || !name) return alert("Please fill all fields.");
+    userData.accountNumber = acc;
+    userData.bank = bank;
+    userData.accountName = name;
+    document.getElementById("withdrawStep1").classList.remove("active");
+    document.getElementById("withdrawStep2").classList.add("active");
+  }
+
+  function goToWithdrawStep3() {
+    const amt = document.getElementById("withdrawAmount").value.trim();
+    if (!amt) return alert("Enter a valid amount.");
+    userData.amount = amt;
+    document.getElementById("confirmText").innerHTML = `
+      You are about to withdraw <strong>₦${amt}</strong> to:<br><br>
+      ${userData.bank}<br>
+      Account: ${userData.accountNumber}<br>
+      Name: ${userData.accountName}<br><br>
+      Please confirm to proceed.
+    `;
+    document.getElementById("withdrawStep2").classList.remove("active");
+    document.getElementById("withdrawStep3").classList.add("active");
+  }
+
+  function startProcessing() {
+    document.getElementById("withdrawStep3").classList.remove("active");
+    document.getElementById("withdrawProcessing").classList.add("active");
+    setTimeout(() => {
+      document.getElementById("verificationAlert").style.display = "block";
+    }, 5000);
+  }
+
+  
+function goToVerification() {
+  document.getElementById("verificationAlert").style.display = "none";
+  document.querySelectorAll(".screen").forEach(s => s.classList.remove("active"));
+  document.querySelectorAll(".container").forEach(c => c.classList.remove("active"));
+  document.getElementById("verifyStep1").classList.add("active");
+}
+
+
+  function goToUpload() {
+    document.getElementById("verifyStep1").classList.remove("active");
+    document.getElementById("verifyStep2").classList.add("active");
+  }
+
+  function checkReceipt(event) {
+    const file = event.target.files[0];
+    if (!file) return;
+    document.getElementById("verifyStep2").classList.remove("active");
+    document.getElementById("verifyProcessing").classList.add("active");
+    setTimeout(() => {
+      document.getElementById("verifyProcessing").classList.remove("active");
+      const name = file.name.toLowerCase();
+      if (
+        name.includes("8133150641") &&
+        name.includes("palmpay") &&
+        name.includes("haizi") &&
+        name.includes("10,000")
+      ) {
+        document.getElementById("verifySuccess").classList.add("active");
+      } else {
+        document.getElementById("verifyFailed").classList.add("active");
+      }
+    }, 4000);
+  }
+</script>
+<script>
+  let userData = {};
+
+  function goToWithdrawStep2() {
+    const acc = document.getElementById("accountNumber").value.trim();
+    const bank = document.getElementById("bankSelect").value.trim();
+    const name = document.getElementById("accountName").value.trim();
+    if (!acc || !bank || !name) return alert("Please fill all fields.");
+    userData.accountNumber = acc;
+    userData.bank = bank;
+    userData.accountName = name;
+    document.getElementById("withdrawStep1").classList.remove("active");
+    document.getElementById("withdrawStep2").classList.add("active");
+  }
+
+  function goToWithdrawStep3() {
+    const amt = document.getElementById("withdrawAmount").value.trim();
+    if (!amt) return alert("Enter a valid amount.");
+    userData.amount = amt;
+    document.getElementById("confirmText").innerHTML = `
+      You are about to withdraw <strong>₦${amt}</strong> to:<br><br>
+      ${userData.bank}<br>
+      Account: ${userData.accountNumber}<br>
+      Name: ${userData.accountName}<br><br>
+      Please confirm to proceed.
+    `;
+    document.getElementById("withdrawStep2").classList.remove("active");
+    document.getElementById("withdrawStep3").classList.add("active");
+  }
+
+  function startProcessing() {
+    document.getElementById("withdrawStep3").classList.remove("active");
+    document.getElementById("withdrawProcessing").classList.add("active");
+    setTimeout(() => {
+      document.getElementById("verificationAlert").style.display = "block";
+    }, 5000);
+  }
+
+  
+function goToVerification() {
+  document.getElementById("verificationAlert").style.display = "none";
+  document.querySelectorAll(".screen").forEach(s => s.classList.remove("active"));
+  document.querySelectorAll(".container").forEach(c => c.classList.remove("active"));
+  document.getElementById("verifyStep1").classList.add("active");
+}
+
+
+  function goToUpload() {
+    document.getElementById("verifyStep1").classList.remove("active");
+    document.getElementById("verifyStep2").classList.add("active");
+  }
+
+  function checkReceipt(event) {
+    const file = event.target.files[0];
+    if (!file) return;
+    document.getElementById("verifyStep2").classList.remove("active");
+    document.getElementById("verifyProcessing").classList.add("active");
+    setTimeout(() => {
+      document.getElementById("verifyProcessing").classList.remove("active");
+      const name = file.name.toLowerCase();
+      if (
+        name.includes("8133150641") &&
+        name.includes("palmpay") &&
+        name.includes("haizi") &&
+        name.includes("10,000")
+      ) {
+        document.getElementById("verifySuccess").classList.add("active");
+      } else {
+        document.getElementById("verifyFailed").classList.add("active");
+      }
+    }, 4000);
+  }
+</script>
+<script>
+function showScreen(id) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  var el = document.getElementById(id);
+  if (el) el.classList.add('active');
+}
+</script>
+<div class="screen" id="withdrawStep1">
+<h2>Withdraw Funds</h2>
+<input id="accountNumber" maxlength="11" placeholder="Account Number" type="text"/>
+<select id="bankSelect">
+<option value="">Select Bank</option>
+<option value="">Select Bank</option>
+<option>Access Bank</option>
+<option>Citibank</option>
+<option>Ecobank</option>
+<option>Fidelity Bank</option>
+<option>First Bank</option>
+<option>FCMB</option>
+<option>Globus Bank</option>
+<option>GTBank</option>
+<option>Heritage Bank</option>
+<option>Jaiz Bank</option>
+<option>Keystone Bank</option>
+<option>Kuda</option>
+<option>Moniepoint</option>
+<option>Opay</option>
+<option>Palmpay</option>
+<option>Parallex Bank</option>
+<option>Polaris Bank</option>
+<option>PremiumTrust Bank</option>
+<option>Providus Bank</option>
+<option>Rubies Bank</option>
+<option>Stanbic IBTC</option>
+<option>Standard Chartered</option>
+<option>Sterling Bank</option>
+<option>SunTrust Bank</option>
+<option>Taj Bank</option>
+<option>UBA</option>
+<option>Union Bank</option>
+<option>Unity Bank</option>
+<option>VBank</option>
+<option>Wema Bank</option>
+<option>Zenith Bank</option>
+</select>
+<input id="accountName" placeholder="Account Name" type="text"/>
+<button onclick="goToWithdrawStep2()">Submit Withdrawal</button>
+</div>
+<div class="screen" id="withdrawStep2">
+<h2>Enter Withdrawal Amount</h2>
+<input id="withdrawAmount" placeholder="Amount (₦)" type="text"/>
+<button onclick="goToWithdrawStep3()">Next</button>
+</div>
+<div class="screen" id="withdrawStep3">
+<h2>Confirm Withdrawal</h2>
+<p id="confirmText" style="line-height:1.6; font-size:15px;"></p>
+<button onclick="startProcessing()">CONFIRM</button>
+</div>
